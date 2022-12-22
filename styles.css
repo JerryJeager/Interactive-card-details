@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary */
+    --linear-gradient1: hsl(249, 99%, 64%);
+    --linear-gradient2: hsl(278, 94%, 30%);
+    --linear-gradient: linear-gradient(122deg,hsl(278, 68%, 11%), hsl(278, 94%, 30%), hsl(278, 68%, 11%));
+    --red: hsl(0, 100%, 66%);
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body{
+    background: url("images/bg-main-mobile.png") no-repeat;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.atm-card{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.back{
+    height: 200px;
+    width: 90%;
+    background: url("./images/bg-card-back.png") center/cover;
+    border-radius: 10px;
+    align-self: flex-end;
+}
+.front{
+    height: 200px;
+    width: 90%;
+    background: url("./images/bg-card-front.png") center/cover;
+    border-radius: 10px;
+    overflow: visible;
+    position: absolute;
+    top: 115px;
+    padding: 20px;
+}
+.circles{
+    display: flex;
+    align-items: center;
+}
+.big-circle{
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+.small-circle{
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.card-number{
+    margin-top: 50px;
+}
+.card-number p{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    width: 100%;
+}
+.name-and-date{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--light-grayish-violet);
+    font-weight: 500;
+    font-size: .8rem;
+    letter-spacing: 2px;
+}
+
+

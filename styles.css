@@ -29,6 +29,7 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
+    /* border: 2px solid red; */
 }
 
 .back{
@@ -36,7 +37,12 @@ body{
     width: 90%;
     background: url("./images/bg-card-back.png") center/cover;
     border-radius: 10px;
+    padding-right: 10px;
     align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--white);
 }
 .front{
     height: 200px;
@@ -66,12 +72,12 @@ body{
     margin-left: 10px;
 }
 .card-number{
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .card-number p{
     color: var(--white);
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     letter-spacing: 2px;
     width: 100%;
 }
@@ -85,4 +91,70 @@ body{
     letter-spacing: 2px;
 }
 
+.card-details{
+    margin: 11rem auto;
+    width: 90%;
+}
+.card-details p{
+    color: var(--very-dark-violet);
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: 2px;
+}
+.card-details input{
+    color: var(--very-dark-violet);
+    caret-color: var(--very-dark-violet);
+    outline: var(--linear-gradient1);
+    width: 100%;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 7px;
+    padding: 10px;
+    border: 1px solid var(--dark-grayish-violet);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.card-details input:hover{
+    border: 1px solid var(--linear-gradient1);
+}
+input::placeholder{
+    color: var(--light-grayish-violet);
+    font-weight: 500;
+    font-size: 1.1rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.card-number-details{
+    margin-top: 20px;
+}
+.date-and-cvc{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
+.date-details, .cvc-details{
+    width: 48%;
+}
+.month-and-year{
+    display: flex;
+    justify-content: space-between;
+}
+.month-and-year input{
+    width: 47%;
+}
+.submit-btn button{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+}

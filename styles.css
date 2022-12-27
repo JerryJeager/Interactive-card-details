@@ -98,7 +98,7 @@ body{
 .card-details p{
     color: var(--very-dark-violet);
     font-weight: 700;
-    font-size: .9rem;
+    font-size: .8rem;
     letter-spacing: 2px;
 }
 .card-details input{
@@ -157,4 +157,10 @@ input::placeholder{
     margin-top: 20px;
     border: none;
     font-family: 'Space Grotesk', sans-serif;
+    transition: .4s;
+}
+.submit-btn button:hover{
+    background: var(--white);
+    border: 2px solid var(--very-dark-violet);
+    color: var(--very-dark-violet);
 }

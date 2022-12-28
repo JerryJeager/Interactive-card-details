@@ -94,6 +94,7 @@ body{
 .card-details{
     margin: 11rem auto;
     width: 90%;
+    /* display: none; */
 }
 .card-details p{
     color: var(--very-dark-violet);
@@ -143,7 +144,7 @@ input::placeholder{
 .month-and-year input{
     width: 47%;
 }
-.submit-btn button{
+button{
     width: 100%;
     height: 60px;
     border-radius: 10px;
@@ -154,12 +155,12 @@ input::placeholder{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
     border: none;
     font-family: 'Space Grotesk', sans-serif;
     transition: .4s;
 }
-.submit-btn button:hover{
+button:hover{
     background: var(--white);
     border: 2px solid var(--very-dark-violet);
     color: var(--very-dark-violet);
@@ -175,4 +176,31 @@ input.error, input.error:hover{
 }
 .blank{
     display: block;
+}
+.date-none, .cvc-none, .wrong-format{
+    margin-top: 10px;
+}
+.thank-you{
+    width: 90%;
+    margin: 10rem auto;
+    display: none;
+}
+.check{
+    display: flex;
+    justify-content: center;
+}
+.thank-you-message{
+    margin-top: 2.3rem;
+    text-align: center;
+}
+.message1{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--very-dark-violet);
+}
+.message2{
+    font-size: 1.2rem;
+    color: var(--dark-grayish-violet);
+    font-weight: 500;
+    margin-top: 20px;
 }

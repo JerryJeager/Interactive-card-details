@@ -1,6 +1,9 @@
+const cardDetails = document.querySelector(".card-details")
+const thankYou = document.querySelector(".thank-you")
 let cardNumberInput = document.getElementById("card-number")
 const wrongFormat = document.querySelector(".wrong-format")
-const confirm = document.querySelector(".submit-btn").querySelector('button')
+const confirmBtn = document.querySelector(".submit-btn").querySelector('.confirm')
+const continueBtn = document.querySelector(".continue")
 const form = document.querySelector('form')
 const inputs = document.querySelectorAll('input')
 const dateCvcInput = document.querySelector('.date-and-cvc').querySelectorAll('input')
@@ -16,6 +19,9 @@ const cardNumber = document.querySelector('.card-number').querySelector('p')
 const cardDate = document.querySelector('.date').querySelector('p')
 let monthValue = ''
 let yearValue = ''
+let confirmMonth = true
+let confirmYear = true
+let confirmCvc = true
 
 let cardNumberInputRegex = /^([\d]{4})([\d]{4})([\d]{4})([\d]{4})$/
 let letter = /[a-z]{1,}/ig
@@ -36,6 +42,9 @@ nameInput.addEventListener('keyup', () => {
 })
 
 cvcInput.addEventListener('keyup', () => {
+    if(cvcInput.value.length > 2){
+        cvcInput.setAttribute('readonly', true)
+    }
     cardCvc.textContent = cvcInput.value
 })
 
@@ -58,39 +67,57 @@ yearInput.addEventListener('keyup', () => {
 })
 
 
-confirm.addEventListener("click", (e) => {
+confirmBtn.addEventListener("click", (e) => {
     confirmDateCvc(e)
     e.preventDefault()
-    
+    if(confirmMonth == true && confirmYear == true && confirmCvc == true){
+        cardDetails.style.display = "none"
+        thankYou.style.display = "block"
+    }
+})
+
+continueBtn.addEventListener("click", () => {
+    cardDetails.style.display = "block"
+    thankYou.style.display = "none"
 })
 
 function confirmDateCvc(e){
     if (monthInput.value == "" || yearInput.value == "") {
         dateNone.classList.add('blank')
+        confirmMonth = false
+        confirmYear = false
     }
     if (monthInput.value == "") {
         e.preventDefault()
         monthInput.classList.add('error')
+        confirmMonth = false
     } if (yearInput.value == "") {
         e.preventDefault()
         yearInput.classList.add('error')
+        confirmYear = false
     } if (cvcInput.value == "") {
         e.preventDefault()
         cvcNone.classList.add('blank')
         cvcInput.classList.add('error')
+        confirmCvc = false
     }
     if (monthInput.value != "" && yearInput.value != "") {
         dateNone.classList.remove('blank')
+        confirmMonth = true
+        confirmYear = true
     }
     if (monthInput.value != "") {
         e.bubbles = true
         monthInput.classList.remove('error')
+        confirmMonth = true
     } if (yearInput.value != "") {
         e.bubbles = true
         yearInput.classList.remove('error')
+        confirmYear = true
     } if (cvcInput.value != "") {
         e.bubbles = true
         cvcNone.classList.remove('blank')
         cvcInput.classList.remove('error')
+        confirmYear = true
     }
 }

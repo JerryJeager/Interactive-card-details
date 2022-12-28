@@ -164,3 +164,15 @@ input::placeholder{
     border: 2px solid var(--very-dark-violet);
     color: var(--very-dark-violet);
 }
+.wrong-format{
+    display: none;
+}
+input.error, input.error:hover{
+    border: 1px solid var(--red);
+}
+.date-none, .cvc-none{
+    display: none;
+}
+.blank{
+    display: block;
+}

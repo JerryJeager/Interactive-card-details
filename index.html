@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <main>
     <section class="atm-card">
         <div class="back">
             <div class="cvc">
@@ -34,7 +34,7 @@
         </div>
     </section>
     <section class="card-details">
-        <form action="">
+        <form action="submit">
             <div class="card-holder-name">
                 <p>CARDHOLDER NAME</p>
                 <input type="text" name="name" id="name" placeholder="e.g. Jane Appleseed">
@@ -49,14 +49,14 @@
                 <div class="date-details">
                     <p>EXP. DATE (MM/YY)</p>
                     <div class="month-and-year">
-                        <input type="number" name="month" id="month" min="1" max="12" maxlength="2" class="valid" placeholder="MM">
-                        <input type="text" name="year" id="year" maxlength="2" placeholder="YY">
+                        <input type="number" name="month" id="month" min="1" max="12"  class="valid" placeholder="MM">
+                        <input type="text" name="year" id="year"  placeholder="YY">
                     </div>
                     <p style="color: hsl(0, 100%, 66%);" class="date-none">can't be blank</p>
                 </div>
                 <div class="cvc-details">
                     <p>CVC</p>
-                    <input type="number" name="cvc" id="cvc" maxlength="3" placeholder="e.g. 123">
+                    <input type="number" name="cvc" id="cvc"  placeholder="e.g. 123">
                     <p style="color: hsl(0, 100%, 66%);" class="cvc-none">can't be blank</p>
                 </div>
             </div>
@@ -70,12 +70,12 @@
             <img src="images/icon-complete.svg" alt="">
         </div>
         <div class="thank-you-message">
-            <p class="message1">THANK YOU!</p>
+            <h2 class="message1">THANK YOU!</h2>
             <p class="message2">We've added your card details</p>
         </div>
         <button type="submit" class="continue">Continue</button>
     </section>
-
+    </main>
     <script src="main.js"></script>
 </body>
 </html>

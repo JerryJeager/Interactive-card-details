@@ -42,15 +42,21 @@ nameInput.addEventListener('keyup', () => {
 })
 
 cvcInput.addEventListener('keyup', () => {
-    if(cvcInput.value.length > 2){
-        cvcInput.setAttribute('readonly', true)
-    }
     cardCvc.textContent = cvcInput.value
+})
+
+monthInput.addEventListener('change', () => {
+    monthValue = monthInput.value
+    if(monthValue < 10 && monthValue.length == 1){
+        cardDate.textContent = `0${monthValue}/${yearValue}`
+    }else{
+        cardDate.textContent = `${monthValue}/${yearValue}`
+    }
 })
 
 monthInput.addEventListener('keyup', () => {
     monthValue = monthInput.value
-    if(monthValue < 10){
+    if(monthValue < 10 && monthValue.length == 1){
         cardDate.textContent = `0${monthValue}/${yearValue}`
     }else{
         cardDate.textContent = `${monthValue}/${yearValue}`
@@ -59,7 +65,7 @@ monthInput.addEventListener('keyup', () => {
 
 yearInput.addEventListener('keyup', () => {
     yearValue = yearInput.value
-    if (monthValue < 10) {
+    if (monthValue < 10 && monthValue.length == 1) {
         cardDate.textContent = `0${monthValue}/${yearValue}`
     } else {
         cardDate.textContent = `${monthValue}/${yearValue}`

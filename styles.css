@@ -204,3 +204,33 @@ input.error, input.error:hover{
     font-weight: 500;
     margin-top: 20px;
 }
+
+@media screen and (min-width: 1024px){
+    body{
+        display: flex;
+        justify-content: space-between;
+        background: url("images/bg-main-desktop.png") no-repeat;
+    }
+    .atm-card{
+        width: 35%;
+        height: 90vh;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-right: 180px;
+    }
+    .card-details{
+        width: 35%;
+    }
+    .thank-you{
+        width: 35%;
+    }
+    .front,.back{
+        width: 380px;
+    }
+    .back{
+        padding-right: 40px;
+    }
+    .continue{
+        margin-top: 30px;
+    }
+}
